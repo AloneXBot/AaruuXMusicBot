@@ -99,16 +99,16 @@ def stream_markup(_, chat_id):
                  [
             InlineKeyboardButton(
 
-                text="ᴅᴇᴠ 💕",
+                text="ᴏᴡɴᴇʀ 💕",
 
                 url=f"t.me/{OWNER_USERNAME}",
 
             ),
             InlineKeyboardButton(
 
-                text="💌 ɢʀᴏᴜᴘ",
+                text="💌 ᴄʜᴀɴɴᴇʟ",
 
-                url=f"{SUPPORT_CHAT}",
+                url=f"{SUPPORT_CHANNEL}",
 
             ),
         ],
