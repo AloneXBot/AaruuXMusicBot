@@ -1,7 +1,7 @@
 import math
-from config import SUPPORT_CHAT, OWNER_USERNAME
+
 from pyrogram.types import InlineKeyboardButton
-from AloneXMusic import app
+
 from AloneXMusic.utils.formatters import time_to_seconds
 
 
@@ -53,7 +53,7 @@ def stream_markup_timer(_, chat_id, played, dur):
     else:
         bar = "-ˋˏ-ˋˏ-ˋˏ-ˋˏ-ˋˏ-ˋˏ-ˋˏ-ˋˏ-ˋˏ✄·"
     buttons = [
-                [
+        [
             InlineKeyboardButton(
                 text=f"{played} {bar} {dur}",
                 callback_data="GetTimer",
@@ -66,11 +66,6 @@ def stream_markup_timer(_, chat_id, played, dur):
             InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
             InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
         ],
-                 [
-            InlineKeyboardButton(text="ᴏᴡɴᴇʀ 💕", url=f"t.me/{OWNER_USERNAME}"),
-            InlineKeyboardButton(text="💌 ᴄʜᴀɴɴᴇʟ", url=f"{SUPPORT_CHANNEL}"),
-        ],
-        [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
     return buttons
 
@@ -84,11 +79,6 @@ def stream_markup(_, chat_id):
             InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
             InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
         ],
-                 [
-            InlineKeyboardButton(text="ᴏᴡɴᴇʀ 💕", url=f"t.me/{OWNER_USERNAME}"),
-            InlineKeyboardButton(text="💌 ᴄʜᴀɴɴᴇʟ", url=f"{SUPPORT_CHANNEL}"),
-        ],
-        [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
     return buttons
 
